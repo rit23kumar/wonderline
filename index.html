@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Parth Kushan IT Pvt Ltd</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="size1 bg0 where1-parent">
+		<!-- Coutdown -->
+		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('images/bg01.jpg');">
+
+			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 days">35</span>
+					<span class="s2-txt4">Days</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 hours">17</span>
+					<span class="s2-txt4">Hours</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 minutes">50</span>
+					<span class="s2-txt4">Minutes</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 seconds">39</span>
+					<span class="s2-txt4">Seconds</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Form -->
+		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+			<div>
+				<h1>Parth Kushan IT Pvt. Ltd.</h1>
+			</div>
+
+			<div class="p-t-50 p-b-60">
+				<p class="m1-txt1 p-b-36">
+					Our website is <span class="m1-txt2">Coming Soon.</span> <br />For any query please contact:<br />
+					<i class="zmdi zmdi-phone animated infinite pulse zmdi-hc-fw mdc-text-blue" style="color: deepskyblue;"></i> +91 76540 89279<br/>
+				<i class="zmdi zmdi-email animated infinite pulse zmdi-hc-fw mdc-text-blue" style="color: deepskyblue;"></i> info@parthkushan.in
+				</p>
+
+				<form class="contact100-form validate-form" onsubmit="sendMail();return false" method="post">
+					<div class="wrap-input100 m-b-10 validate-input" data-validate = "Name is required">
+						<input class="s2-txt1 placeholder0 input100" type="text" id="name" placeholder="Your Name">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-20 validate-input" data-validate = "Mobile Number is required">
+						<input class="s2-txt1 placeholder0 input100" type="number" id="phone" placeholder="Mobile Number">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 m-b-20 validate-input" data-validate = "Message is required">
+						<input class="s2-txt1 placeholder0 input100" type="text" id="message" placeholder="Message" >
+						
+						<span class="focus-input100"></span>
+					</div>
+					<span id="form_response" class="form-group" style="font-size: 13px; font-weight: 600;">
+					</span>
+					<div class="w-full">
+						<button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
+							Send query
+						</button>
+					</div>
+				</form>
+
+				
+			</div>
+
+			<div class="flex-w">
+				<a href="#" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
+					<i class="fa fa-facebook"></i>
+				</a>
+
+				<a href="#" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
+					<i class="fa fa-twitter"></i>
+				</a>
+
+				<a href="#" class="flex-c-m size5 bg5 how1 trans-04 m-r-5">
+					<i class="fa fa-youtube-play"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		var today = new Date();
+		var Christmas = new Date(today.getFullYear() + "-03-06");
+		var diffMs = (Christmas - today); // milliseconds between now & Christmas
+		var diffDays = Math.floor(diffMs / 86400000); // days
+		var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+		var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+		$('.cd100').countdown100({
+			
+			endtimeYear: 0,
+			endtimeMonth: 0,
+			endtimeDate: diffDays,
+			endtimeHours: diffHrs,
+			endtimeMinutes: diffMins,
+			endtimeSeconds: 0,
+			timeZone: "" 
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<script>
+	
+	function sendMail() {
+	document.getElementById("form_response").innerHTML = "Sending...";
+	let message = `Hi Admin,
+
+You got a message from parthkushan contact field.
+
+Sender Name : `+document.getElementById("name").value+
+`
+Sender Email/Mobile No. : `+document.getElementById("phone").value+
+`
+Message is : `+document.getElementById("message").value+
+`
+
+Regards:
+Team Parth Kushan
+`;
+		let data1 = {
+		"from":"Parth Kushan IT Pvt Ltd",
+        "sendTo":"info@parthkushan.in",
+		"subject":"Message from Parth Kushan website",//create body Email thisForm["name"].value  thisForm["name"].value
+		"messageBody":message,
+		"carbonCopy":"NA"
+		};
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			 if (this.readyState == 4 && this.status == 200) {
+				 //alert(this.responseText);
+				document.getElementById("form_response").innerHTML = "Message Sent";
+				document.getElementById("form_response").style.color = "green";				
+				document.getElementById("name").value = "";
+				document.getElementById("phone").value = "";
+				document.getElementById("message").value = "";
+			 }
+			 else if(this.readyState == 4)
+			 {
+				document.getElementById("form_response").innerHTML = "Message Sent Failed"
+				document.getElementById("form_response").style.color = "red";
+			 }
+		};
+		
+		xhttp.open("POST", "https://maths.host/api/util/email/send-mail", true);
+		xhttp.setRequestHeader("Content-type", "application/json");
+		xhttp.send(JSON.stringify(data1));
+		
+	}
+	</script>
+</body>
+</html>
